@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perception is becoming the real interface layer across physiological, behavioural, and environmental sensing.">
+    <meta name="author" content="Puneet Tomar">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Perception Is Becoming the Real Interface Layer | Puneet Tomar">
+    <meta property="og:description" content="A blog on how future systems will rely on richer perception stacks across human and environmental signals.">
+    <meta property="og:url" content="https://tomarp.github.io/blogs/perception-layer.html">
+    <meta property="og:image" content="https://tomarp.github.io/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perception Is Becoming the Real Interface Layer | Puneet Tomar">
+    <meta name="twitter:description" content="A blog on how future systems will rely on richer perception stacks across human and environmental signals.">
+    <meta name="twitter:image" content="https://tomarp.github.io/og-image.svg">
+    <link rel="canonical" href="https://tomarp.github.io/blogs/perception-layer.html">
+    <link rel="icon" href="../favicon.svg?v=2" type="image/svg+xml">
+    <link rel="icon" href="../favicon-32.png?v=2" type="image/png" sizes="32x32">
+    <link rel="shortcut icon" href="../favicon-32.png?v=2" type="image/png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png?v=2">
+    <title>Perception Is Becoming the Real Interface Layer | Puneet Tomar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [["\\(", "\\)"]],
+                displayMath: [["\\[", "\\]"]]
+            }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="site-shell">
+        <div class="page-noise"></div>
+        <div class="page-glow"></div>
+        <header class="site-header">
+            <div class="container">
+                <div class="brand-cluster">
+                    <a class="brand" href="../index.html" aria-label="Go to homepage">
+                        <span class="brand-mark" aria-hidden="true"></span>
+                    </a>
+                    <button class="search-toggle" data-search-toggle type="button" aria-label="Search website" aria-expanded="false"></button>
+                </div>
+                <div class="nav-actions">
+                    <nav class="site-nav" data-site-nav aria-label="Primary navigation">
+                        <a class="nav-link" href="../index.html">Home</a>
+                        <a class="nav-link" href="../projects/index.html">Projects</a>
+                        <a class="nav-link" href="../blogs/index.html">Blogs</a>
+                        <a class="nav-link" href="../blogs.html">Publications</a>
+                        <a class="nav-link" href="../about.html">About</a>
+                    </nav>
+                    <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle theme"></button>
+                    <button class="menu-toggle" data-menu-toggle type="button" aria-label="Toggle navigation" aria-expanded="false">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="page-hero">
+                <div class="container">
+                    <div class="page-hero-card" data-reveal>
+                        <span class="eyebrow">Feb 2026 · Research Reflection</span>
+                        <h1>Perception is becoming the real interface layer</h1>
+                        <p>Future systems will rely less on explicit commands and more on fused estimates built from physiology, behaviour, light, thermal exposure, and environmental context.</p>
+                        <p class="article-byline">Author: P. Tomar</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container article-layout">
+                    <article class="article-main">
+                        <div class="article-card article-prose" data-reveal>
+                            <div class="callout">
+                                <strong>Research question.</strong> How does perception change when a system has to read people and environments together rather than classify a single modality?
+                            </div>
+                            <p>Interfaces are changing. For many intelligent systems, the next interface may not be a menu, a typed prompt, or even a voice command. It may be an ongoing perceptual loop in which the system estimates state continuously from multiple sensors and adapts before the user has to ask. That framing shifts perception from a front-end concern to a systems problem.</p>
+                            <p>A useful abstraction is an observation model:</p>
+                            <div class="equation-block">
+                                <span class="equation-label">Observation Model</span>
+                                <div class="math-block">\[z_t^{(m)} = h_m(x_t) + \varepsilon_t^{(m)}, \qquad \hat{x}_t = f(z_{1:T}^{(1)}, \ldots, z_{1:T}^{(M)})\]</div>
+                            </div>
+                            <p>Each modality <span class="math-inline">m</span> produces a noisy observation <span class="math-inline">z_t^(m)</span> of an unobserved state <span class="math-inline">x_t</span>. The hard part is not only sensing but fusing asynchronous, incomplete, and differently calibrated measurements. Multimodal machine learning has treated representation and alignment as central challenges for this reason [1]. In my own direction, this is not abstract. It appears concretely in datasets and studies where thermal variables, light conditions, and human physiological responses need to be interpreted together rather than as parallel measurements.</p>
+                            <h2>Why richer perception matters</h2>
+                            <p>Vision-only interfaces are powerful, but they do not exhaust what a system can know. Behavioural observations can tell a system what happened; physiological and environmental signals can help explain why it happened and whether the same visible behaviour means the same internal state. In human settings that distinction matters. Attention, overload, discomfort, and uncertainty often present weakly in any single channel.</p>
+                            <p>The CLTR dataset is close to the kind of perception stack I think will matter more in future systems: chrono-biological context, light exposure, thermal variables, and physiological response are all part of the sensing problem, not secondary annotations. Likewise, the PPD work shows why perception models must account for the fact that subjective thermal perception and physiological response can diverge under controlled indoor exposure. A perception layer that only tracks one of them will miss part of the human state.</p>
+                            <p>Wearable sensing is making this technically plausible. Recent reviews emphasize that skin-interfaced and continuously worn sensors are increasing the quality and breadth of physiological measurements available outside traditional laboratory settings [2, 3]. That does not remove the research problem. It deepens it, because more sensors mean more synchronization, more context dependence, and more opportunities for artifact leakage.</p>
+                            <h2>Perception is a calibration problem</h2>
+                            <p>Once a system moves beyond a single modality, perception becomes a calibration problem. Temperature influences electrodermal measures. Motion influences wearables. Task structure influences EEG interpretation. Even thermoregulatory state estimation from non-invasive sensors depends on context and modelling assumptions [4]. In other words, perception quality depends not only on sensor availability but on how carefully the sensing stack is tied to environment and timing.</p>
+                            <p>A useful engineering requirement is alignment in both time and context. If <span class="math-inline">\(\Delta t\)</span> is acquisition lag between streams and <span class="math-inline">\(c_t\)</span> is contextual mismatch, then perceptual error can be thought of as increasing with both terms:</p>
+                            <div class="equation-block">
+                                <span class="equation-label">Alignment Burden</span>
+                                <div class="math-block">\[E_{perc} \propto \alpha |\Delta t| + \beta c_t\]</div>
+                            </div>
+                            <p>This is exactly why protocol-aware multimodal studies matter. They define the conditions under which fusion is meaningful. For me, perception is becoming the real interface layer because future systems will need to infer human state across light, thermal, physiological, and behavioural dimensions rather than reading one stream in isolation.</p>
+                            <h2>References</h2>
+                            <ol>
+                                <li><a href="https://doi.org/10.1109/TPAMI.2018.2798607" target="_blank" rel="noopener noreferrer">Baltrušaitis T, Ahuja C, Morency LP. Multimodal Machine Learning: A Survey and Taxonomy. IEEE TPAMI, 2018.</a></li>
+                                <li><a href="https://doi.org/10.1063/5.0086935" target="_blank" rel="noopener noreferrer">Stuart T, Hanna J, Gutruf P. Wearable devices for continuous monitoring of biosignals: Challenges and opportunities. APL Bioengineering, 2022.</a></li>
+                                <li><a href="https://doi.org/10.1152/physiol.00039.2024" target="_blank" rel="noopener noreferrer">Cherian J et al. Wearable Sensing for Clinical Physiology Monitoring: Emerging Paradigms. Physiology, 2025.</a></li>
+                                <li><a href="https://doi.org/10.1109/IEMBS.2011.6090893" target="_blank" rel="noopener noreferrer">Buller MJ et al. Human thermoregulatory system state estimation using non-invasive physiological sensors. EMBC, 2011.</a></li>
+                                <li><a href="https://doi.org/10.5281/zenodo.18270221" target="_blank" rel="noopener noreferrer">El Kounni A, Tomar P, Vellei M, Le Dreau J, Pisello AL, Inard C, Ramallo Gonzalez A. Chrono-Light Thermophysiology Response (CLTR) dataset. Zenodo, 2026.</a></li>
+                                <li><a href="https://doi.org/10.1016/j.buildenv.2026.114256" target="_blank" rel="noopener noreferrer">Tomar P, Pisello AL. Physiological-perceptual divergence in human thermal adaptation. Building and Environment, 2026.</a></li>
+                            </ol>
+                        </div>
+                    </article>
+                    <aside class="article-sidebar">
+                        <div class="article-card detail-list" data-reveal>
+                            <div class="detail-item"><strong>Domain</strong><span>Perception systems</span></div>
+                            <div class="detail-item"><strong>Methods</strong><span>Fusion, context modelling, wearables</span></div>
+                            <div class="detail-item"><strong>Keywords</strong><span>CLTR, thermal, light exposure</span></div>
+                        </div>
+                        <a class="button-link back-link" href="../blogs/index.html" data-reveal><span class="back-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M19 12H7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 7 6 12l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Back to All Blogs</span></a>
+                    </aside>
+                </div>
+            </section>
+        </main>
+        <div class="search-modal" data-search-modal><div class="search-dialog" role="dialog" aria-modal="true" aria-label="Search website"><div class="search-head"><input class="search-field" data-search-input type="search" placeholder="Search all content on the website"><button class="search-close" data-search-close type="button" aria-label="Close search">×</button></div><div class="search-status" data-search-status></div><div class="search-body"><div class="search-results" data-search-results></div></div></div></div>
+        <footer class="site-footer"><div class="container"><div class="footer-card"><div class="footer-meta"><div class="social-row" aria-label="Social media links"><a class="social-link" href="https://github.com/tomarp" target="_blank" rel="noopener noreferrer" aria-label="GitHub tomarp"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3C7.03 3 3 7.03 3 12c0 3.98 2.58 7.35 6.16 8.54.45.08.61-.2.61-.44v-1.72c-2.5.54-3.03-1.06-3.03-1.06-.41-1.03-1-1.31-1-1.31-.82-.56.06-.55.06-.55.91.06 1.39.94 1.39.94.8 1.38 2.11.98 2.62.75.08-.59.31-.98.57-1.2-1.99-.23-4.09-.99-4.09-4.41 0-.97.35-1.77.93-2.39-.1-.22-.41-1.14.09-2.38 0 0 .75-.24 2.47.91A8.58 8.58 0 0 1 12 7.33c.77 0 1.54.1 2.26.3 1.72-1.15 2.47-.91 2.47-.91.5 1.24.19 2.16.09 2.38.58.62.93 1.42.93 2.39 0 3.43-2.11 4.18-4.12 4.41.32.27.61.81.61 1.63v2.42c0 .24.16.53.62.44A9 9 0 0 0 21 12c0-4.97-4.03-9-9-9Z" fill="currentColor"/></svg></span></a><a class="social-link" href="https://www.linkedin.com/in/tomarp/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn tomarp"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8.34 9.34H5.56V18h2.78V9.34ZM6.95 8.2A1.61 1.61 0 1 0 6.94 5a1.61 1.61 0 0 0 0 3.2ZM18.44 12.7c0-2.65-1.41-3.88-3.3-3.88-1.52 0-2.2.84-2.58 1.43v-1.22H9.78c.04.81 0 8.97 0 8.97h2.78v-4.99c0-.27.02-.54.1-.73.21-.54.69-1.1 1.5-1.1 1.06 0 1.48.82 1.48 2.03V18h2.79l.01-5.3Z" fill="currentColor"/></svg></span></a><a class="social-link" href="https://x.com/puneet_tomar" target="_blank" rel="noopener noreferrer" aria-label="Twitter puneet_tomar"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M13.77 10.14 19.94 3h-1.46l-5.36 6.2L8.84 3H3.9l6.47 9.41L3.9 21h1.46l5.66-6.55L15.53 21h4.94l-6.7-10.86ZM11.76 12.47l-.66-.94-5.2-7.44h2.25l4.2 6.01.66.94 5.45 7.8h-2.25l-4.45-6.37Z" fill="currentColor"/></svg></span></a><a class="social-link" href="https://www.youtube.com/@tomarp" target="_blank" rel="noopener noreferrer" aria-label="YouTube tomarp"><span class="social-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M21 12.2c0 2.2-.26 3.67-.51 4.45a2.34 2.34 0 0 1-1.48 1.49C18.23 18.39 16.71 18.65 12 18.65c-4.71 0-6.23-.26-7.01-.51a2.34 2.34 0 0 1-1.48-1.49C3.26 15.87 3 14.4 3 12.2c0-2.2.26-3.67.51-4.45a2.34 2.34 0 0 1 1.48-1.49C5.77 6.01 7.29 5.75 12 5.75c4.71 0 6.23.26 7.01.51a2.34 2.34 0 0 1 1.48 1.49c.25.78.51 2.25.51 4.45ZM10.25 9.55v5.3l4.6-2.65-4.6-2.65Z" fill="currentColor"/></svg></span></a></div><p>&copy; <span data-current-year></span> Puneet Tomar · AI Research Frontier</p></div></div></div></footer>
+    </div>
+    <script src="../data/site-data.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
